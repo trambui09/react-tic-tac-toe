@@ -10,6 +10,16 @@ const generateSquareComponents = (squares, onClickCallback) => {
   //  you need to return a 1D array
   //  of square components
 
+  const arr1d = [].concat(...squares)
+
+  const squareComponents = arr1d.map((square) => 
+    <Square 
+      id={square.id}
+      value={square.value}
+    />
+  )
+
+  return squareComponents;
 }
 
 const Board = ({ squares, onClickCallback }) => {
