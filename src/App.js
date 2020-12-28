@@ -36,7 +36,7 @@ const App = () => {
   //   When it is clicked on.
   //   Then pass it into the squares as a callback
 
-  const updateSquare = (updatedSquare) => {
+  const callback = (updatedSquare) => {
     const newSquares = [];
     squares.forEach(square => {
       if (square.id === updatedSquare.id) {
@@ -75,7 +75,7 @@ const App = () => {
         <button>Reset Game</button>
       </header>
       <main>
-        <Board squares={squares} onClickCallback={updateSquare} />
+        <Board squares={squares} onClickCallback={callback} />
       </main>
     </div>
   );
